@@ -48,12 +48,11 @@
     /**
      * Sly.
      *
-     * @class
      *
      * @param {Element} frame       DOM element of sly container.
      * @param {Object}  options     Object with options.
      * @param {Object}  callbackMap Callbacks map.
-     */
+     ***/
     function Sly(frame, options, callbackMap) {
         // Extend options
         var o = $.extend({}, Sly.defaults, options);

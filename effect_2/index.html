@@ -48,13 +48,6 @@
     <h2>Force Centered
         <small>- active item is always centered, and middle item is always activated</small>
     </h2>
-
-    <div class="scrollbar">
-        <div class="handle" style="transform: translateZ(0px) translateX(328px); width: 190px;">
-            <div class="mousearea"></div>
-        </div>
-    </div>
-
     <div class="frame forcecentered" id="forcecentered" style="overflow: hidden;">
         <ul class="clearfix" style="">
             <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
@@ -69,9 +62,9 @@
             <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
             <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
             <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
         </ul>
     </div>
-
     <div class="controls center">
         <button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
         <button class="btn next">next <i class="icon-chevron-right"></i></button>
@@ -122,11 +115,11 @@
             smart: 1,
             activateMiddle: 1,
             activateOn: 'click',
-            mouseDragging: 1,
-            touchDragging: 1,
+            mouseDragging: 0,
+            touchDragging: 0,
             releaseSwing: 1,
             startAt: 0,
-            scrollBar: $wrap.find('.scrollbar'),
+            //scrollBar: $wrap.find('.scrollbar'),
             scrollBy: 1,
             speed: 300,
             elasticBounds: 1,

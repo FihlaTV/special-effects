@@ -33,6 +33,7 @@ body { background: #e8e8e8; }
     color: #ddd;
     text-align: center;
     cursor: pointer;
+    margin-top:400px;
 }
 
 .frame.forcecentered ul li.active {
