@@ -6,7 +6,7 @@ special-effects
 effect_1
 -------
 ###demo
-![效果]('effect_1/images/effect_1.png')
+![效果](effect_1/images/effect_1.png)
 ###how to use
 ```javascript
 $(function(){
