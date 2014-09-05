@@ -241,9 +241,7 @@
 			if (o.reducedSize === 1) {
 				panels.css({ width: base.regWidth }); // excluding fontsize change to prevent video flicker
 			} else {
-				panels.stop(true,false).animate({ width: base.regWidth,marginTop:'100' }, (time === 0) ? 0 : o.speed);
-				
-				
+				panels.stop(true,false).animate({ width: base.regWidth,marginTop:'180' }, (time === 0) ? 0 : o.speed);
 			}
 		};
 
@@ -260,7 +258,6 @@
 				panels.stop(true,false).animate({ width: base.curWidth,marginTop:'0' }, (time === 0) ? 0 : o.speed, function(){
 					base.completed(num, flag);
 				});
-				
 			}
 		};
 

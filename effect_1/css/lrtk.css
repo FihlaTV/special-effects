@@ -179,5 +179,6 @@ a.mb-scrollButtons.disabled {
 
 .mb-inside img {
     width: 100%;
+    border: 1px solid red;
 }
 
