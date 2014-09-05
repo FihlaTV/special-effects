@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title></title>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.easy.js"></script>
+    <script type="text/javascript" src="js/jquery.sly.js"></script>
+
+</head>
+<body>
+<!-- 代码开始 -->
+<div class="wrap">
+    <h2>One item per frame</h2>
+
+    <div class="scrollbar">
+        <div class="handle" style="transform: translateZ(0px) translateX(998px); width: 71px;">
+            <div class="mousearea"></div>
+        </div>
+    </div>
+    <div class="frame oneperframe" id="oneperframe" style="overflow: hidden;">
+        <ul class="clearfix" style="transform: translateZ(0px) translateX(-15974px); width: 18256px;">
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li>15</li>
+        </ul>
+    </div>
+
+    <div class="controls center">
+        <button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
+        <button class="btn next">next <i class="icon-chevron-right"></i></button>
+    </div>
+</div>
+<div class="wrap">
+    <h2>Force Centered
+        <small>- active item is always centered, and middle item is always activated</small>
+    </h2>
+
+    <div class="scrollbar">
+        <div class="handle" style="transform: translateZ(0px) translateX(328px); width: 190px;">
+            <div class="mousearea"></div>
+        </div>
+    </div>
+
+    <div class="frame forcecentered" id="forcecentered" style="overflow: hidden;">
+        <ul class="clearfix" style="">
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+            <li class=""><a href="#" target="_blank"><img src="images/img01.jpg"></a></li>
+        </ul>
+    </div>
+
+    <div class="controls center">
+        <button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
+        <button class="btn next">next <i class="icon-chevron-right"></i></button>
+    </div>
+</div>
+
+<!-- 代码结束 -->
+</div>
+
+</body>
+<script type="text/javascript">
+    (function () {
+        var $frame = $('#oneperframe');
+        var $wrap = $frame.parent();
+
+        // Call Sly on frame
+        $frame.sly({
+            horizontal: 1,
+            itemNav: 'forceCentered',
+            smart: 1,
+            activateMiddle: 1,
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: 0,
+            scrollBar: $wrap.find('.scrollbar'),
+            scrollBy: 1,
+            speed: 300,
+            elasticBounds: 1,
+            easing: 'easeOutExpo',
+            dragHandle: 1,
+            dynamicHandle: 1,
+            clickBar: 1,
+            // Buttons
+            prev: $wrap.find('.prev'),
+            next: $wrap.find('.next')
+        });
+    }());
+
+    (function () {
+        var $frame = $('#forcecentered');
+        var $wrap = $frame.parent();
+
+        // Call Sly on frame
+        $frame.sly({
+            horizontal: 1,
+            itemNav: 'forceCentered',
+            smart: 1,
+            activateMiddle: 1,
+            activateOn: 'click',
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: 0,
+            scrollBar: $wrap.find('.scrollbar'),
+            scrollBy: 1,
+            speed: 300,
+            elasticBounds: 1,
+            easing: 'easeOutExpo',
+            dragHandle: 1,
+            dynamicHandle: 1,
+            clickBar: 1,
+
+            // Buttons
+            prev: $wrap.find('.prev'),
+            next: $wrap.find('.next')
+        });
+    }());
+</script>
+</html>
