@@ -6,7 +6,7 @@ special-effects
 effect_1
 -------
 ###demo
-![效果]('/effect_1/images/effect_1.png')
+![效果]('effect_1/images/effect_1.png')
 ###how to use
 ```javascript
 $(function(){
@@ -19,4 +19,3 @@ $(function(){
 			//navFormatter : function(){ return "&#9679;"; } // 指示器格式，为空即会显示123
 		});
 	});
-```javascript
